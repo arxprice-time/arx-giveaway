@@ -243,7 +243,8 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
     overflow-y:visible!important;-webkit-overflow-scrolling:touch;
     scrollbar-width:none;gap:0;justify-content:flex-start;padding-bottom:4px}
   .nav-links::-webkit-scrollbar{display:none}
-  .nav-dd-btn{font-size:12px;padding:0 10px;height:32px}
+  .nav-dd-btn{font-size:12px;padding:0 10px;height:32px;white-space:nowrap}
+  .nav-link-btn{font-size:12px;padding:0 10px;height:32px}
   .nav-menu{position:fixed!important;left:10px!important;right:10px!important;
     top:112px!important;transform:none!important;width:auto!important;
     max-height:60vh!important;overflow-y:auto!important;z-index:2147483647!important}
@@ -284,49 +285,22 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
       </div>
     </a>
     <div class="nav-links">
+      <!-- Prop Firms — dropdown -->
       <div class="nav-dd">
         <button class="nav-dd-btn" type="button">Prop Firms<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
         <div class="nav-menu">
-          <a class="nav-menu-item" href="https://www.arxpricetime.com"><span class="nav-menu-icon">📊</span>Forex Firms</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com"><span class="nav-menu-icon">📈</span>Futures Firms</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com"><span class="nav-menu-icon">🔥</span>Today's Deals</a>
+          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-prop-firms"><span class="nav-menu-icon">📊</span>Forex Firms</a>
+          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-futures"><span class="nav-menu-icon">📈</span>Futures Firms</a>
+          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-deals"><span class="nav-menu-icon">🔥</span>Today's Deals</a>
         </div>
       </div>
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Learn &amp; Access<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/arx-method-full-course" target="_blank"><span class="nav-menu-icon">🎓</span>ARX Full Course<span class="nav-menu-badge">NEW</span></a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/learning-and-access" target="_blank"><span class="nav-menu-icon">⭐</span>Monthly Access</a>
-          <div class="nav-menu-sep"></div>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/the-7-phases-of-a-profitable-trader" target="_blank"><span class="nav-menu-icon">📄</span>7 Phases (Free)</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/arx-break-even-protocol-pdf-guide" target="_blank"><span class="nav-menu-icon">📄</span>Break-Even (Free)</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/the-arx-reversal-code" target="_blank"><span class="nav-menu-icon">🔒</span>Reversal Code</a>
-        </div>
-      </div>
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Discord<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="https://discord.gg/FCZxHb4qKA" target="_blank"><span class="nav-menu-icon">💬</span>Join Free</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/learning-and-access" target="_blank"><span class="nav-menu-icon">👑</span>Premium Access<span class="nav-menu-badge">ARX</span></a>
-        </div>
-      </div>
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Follow Us<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="https://www.instagram.com/arxpricetime" target="_blank"><span class="nav-menu-icon">📸</span>Instagram</a>
-          <a class="nav-menu-item" href="https://www.tiktok.com/@arx_price_time" target="_blank"><span class="nav-menu-icon">🎵</span>TikTok</a>
-          <a class="nav-menu-item" href="https://www.youtube.com/channel/UCbVKn3XHJvl6XAFGC78EcuA" target="_blank"><span class="nav-menu-icon">▶️</span>YouTube</a>
-          <a class="nav-menu-item" href="https://x.com/arxpricetime" target="_blank"><span class="nav-menu-icon">🐦</span>X / Twitter</a>
-          <a class="nav-menu-item" href="https://t.me/ARXPriceTime" target="_blank"><span class="nav-menu-icon">✈️</span>Telegram</a>
-        </div>
-      </div>
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Giveaway 🎁<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="#gw-enter"><span class="nav-menu-icon">🎁</span>Enter Now<span class="nav-menu-badge">LIVE</span></a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/community" target="_blank"><span class="nav-menu-icon">👥</span>Community</a>
-        </div>
-      </div>
+      <!-- Learn & Access — 1 clique -->
+      <a class="nav-link-btn" href="https://arxprice-time.github.io/ARX-learn-access/" target="_blank" rel="noopener">🎓 Learn &amp; Access</a>
+      <!-- Follow Us — 1 clique -->
+      <a class="nav-link-btn" href="https://arxprice-time.github.io/ARX-follow-us/" target="_blank" rel="noopener">📱 Follow Us</a>
+      <!-- Giveaway — 1 clique, destaque roxo -->
+      <a class="nav-link-btn gw" href="https://arxprice-time.github.io/ARX-giveaway-page/" target="_blank" rel="noopener">🎁 Giveaway</a>
+      <!-- Login — dropdown -->
       <div class="nav-dd">
         <button class="nav-dd-btn" type="button">Login<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
         <div class="nav-menu">
