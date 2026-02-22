@@ -5,27 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARX Giveaway | Enter Now</title>
 <meta name="description" content="Enter the ARX Giveaway. Win prop firm challenges, course access, discount codes and exclusive ARX rewards.">
-<!-- Fonts: preconnect + async load to avoid render blocking on GitHub Pages -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600;700&display=swap">
-<!-- Fallback: load via @import in case link tag is blocked -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@0,300;0,400;0,500&family=Outfit:wght@300;400;500;600;700&display=swap');
-</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --page:#050505;--card:#0a0a0e;
   --a:#a855f7;--a2:#7c3aed;--a3:#c084fc;--a4:#6d28d9;
   --text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.50);--dim:rgba(255,255,255,.28);
-  --line:rgba(168,85,247,.15);--ticker-h:46px;--nav-h:66px;
+  --line:rgba(168,85,247,.15);
 }
 html{scroll-behavior:smooth}
 body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-/* ── BG ── */
 .bg-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
     radial-gradient(ellipse 80% 65% at 50% -5%,rgba(168,85,247,.20) 0%,transparent 65%),
@@ -39,69 +33,15 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   background-image:linear-gradient(rgba(168,85,247,1) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,1) 1px,transparent 1px);
   background-size:80px 80px}
 
-/* ══ TICKER ══ */
-#arx-ticker{position:sticky;top:0;z-index:9999;width:100%;overflow:hidden;
-  background:rgba(5,5,5,.92);backdrop-filter:blur(22px);
-  border-bottom:1px solid var(--line);box-shadow:0 0 50px rgba(168,85,247,.12)}
-.ticker-inner{height:var(--ticker-h);display:flex;align-items:center;gap:10px;padding:0 16px}
-.ticker-badge{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;
-  height:28px;padding:0 12px;border-radius:999px;
-  background:rgba(168,85,247,.11);border:1px solid rgba(168,85,247,.28);
-  font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--a3)}
-.ticker-badge .dot{width:6px;height:6px;border-radius:50%;
-  background:var(--a);box-shadow:0 0 7px var(--a);animation:blink 1.8s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.22}}
-.ticker-marquee{flex:1;overflow:hidden}
-.ticker-track{display:inline-flex;align-items:center;animation:ticker-scroll 34s linear infinite}
-#arx-ticker:hover .ticker-track{animation-play-state:paused}
-@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ticker-item{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 13px;
-  margin-right:8px;border-radius:999px;border:1px solid rgba(168,85,247,.17);
-  background:rgba(0,0,0,.18);color:var(--text);font-size:12px;text-decoration:none;
-  transition:.15s ease;white-space:nowrap}
-.ticker-item:hover{border-color:rgba(168,85,247,.38);background:rgba(168,85,247,.08)}
-.ticker-item .tf{font-weight:600}
-.ticker-item .td{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--a3);
-  background:rgba(168,85,247,.11);border:1px solid rgba(168,85,247,.22);padding:2px 8px;border-radius:999px}
-
-/* ══ NAV ══ */
-#arx-nav{position:sticky;top:var(--ticker-h);z-index:5000;width:100%;
-  background:rgba(5,5,5,.93);backdrop-filter:blur(22px);
-  border-bottom:1px solid rgba(255,255,255,.05);box-shadow:0 4px 30px rgba(0,0,0,.45)}
-.nav-inner{max-width:1380px;margin:0 auto;padding:0 40px;height:var(--nav-h);
-  display:flex;align-items:center;justify-content:space-between;overflow:visible}
-.nav-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text);flex:0 0 auto}
-.nav-brand img{height:36px;width:auto;object-fit:contain;filter:drop-shadow(0 0 10px rgba(168,85,247,.35))}
-.nav-brand-name{font-family:'Syne',sans-serif;font-weight:700;font-size:14.5px}
-.nav-brand-sub{font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:1px;letter-spacing:.05em}
-.nav-links{display:flex;align-items:center;gap:0;flex:1;justify-content:center;overflow:visible}
-.nav-dd{position:relative;flex:0 0 auto}
-.nav-dd-btn{display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 13px;
-  border-radius:8px;background:transparent;border:1px solid transparent;
-  color:rgba(255,255,255,.68);font-family:'Outfit',sans-serif;font-size:13px;
-  font-weight:500;cursor:pointer;transition:.15s ease;white-space:nowrap}
-.nav-dd-btn:hover,.nav-dd.open .nav-dd-btn{color:#fff;background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.16)}
-.nav-dd-btn svg{width:11px;height:11px;fill:none;stroke:rgba(168,85,247,.8);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
-.nav-dd.open .nav-dd-btn svg{transform:rotate(180deg)}
-.nav-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);
-  min-width:210px;background:rgba(9,9,13,.97);border:1px solid rgba(168,85,247,.22);
-  border-radius:14px;box-shadow:0 20px 65px rgba(0,0,0,.70),0 0 40px rgba(168,85,247,.09);
-  padding:6px;display:none;z-index:9999}
-.nav-dd.open .nav-menu{display:block}
-.nav-menu-item{display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:9px;
-  color:rgba(255,255,255,.82);text-decoration:none;font-size:13px;font-weight:500;transition:.13s ease;white-space:nowrap}
-.nav-menu-item:hover{background:rgba(168,85,247,.10);color:#fff}
-.nav-menu-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;
-  justify-content:center;background:rgba(168,85,247,.09);border:1px solid rgba(168,85,247,.18);font-size:13px;flex:0 0 auto}
-.nav-menu-sep{height:1px;background:rgba(255,255,255,.06);margin:5px 8px}
-.nav-menu-badge{margin-left:auto;padding:3px 8px;border-radius:999px;
-  background:linear-gradient(135deg,var(--a),var(--a2));font-size:9.5px;font-weight:700;color:#fff;letter-spacing:.05em;text-transform:uppercase}
-.nav-cta{flex:0 0 auto;height:36px;padding:0 18px;border-radius:999px;
-  background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;font-weight:700;font-size:13px;
-  text-decoration:none;display:flex;align-items:center;gap:6px;
-  box-shadow:0 8px 28px rgba(168,85,247,.26);transition:.15s ease}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 14px 40px rgba(168,85,247,.36);filter:brightness(1.05)}
+/* ══ BACK BAR ══ */
+.back-bar{position:sticky;top:0;z-index:9999;padding:14px 32px;
+  background:rgba(5,5,5,.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(168,85,247,.12)}
+.back-bar a{display:inline-flex;align-items:center;gap:8px;
+  color:rgba(255,255,255,.55);text-decoration:none;
+  font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.5px;
+  text-transform:uppercase;transition:color .2s}
+.back-bar a:hover{color:#fff}
 
 /* ══ HERO ══ */
 .gw-hero{position:relative;z-index:1;padding:90px 40px 60px;text-align:center;overflow:visible}
@@ -111,6 +51,7 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   text-transform:uppercase;color:var(--a3);margin-bottom:24px}
 .gw-chip .cdot{width:5px;height:5px;border-radius:50%;
   background:var(--a);box-shadow:0 0 6px var(--a);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.22}}
 .gw-title{font-family:'Syne',sans-serif;font-size:clamp(42px,7vw,88px);
   font-weight:800;line-height:1.05;letter-spacing:-.04em;color:#fff;margin-bottom:20px;padding-bottom:4px}
 .gw-title .hl{background:linear-gradient(135deg,var(--a3),var(--a),var(--a2));
@@ -147,25 +88,19 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
 .gw-enter-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;
   color:#fff;letter-spacing:-.03em;margin-bottom:10px}
 .gw-enter-sub{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:36px;max-width:460px;margin-left:auto;margin-right:auto}
-
-/* ── BIG CTA BUTTON ── */
-.gw-cta-btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+.gw-cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
   height:60px;padding:0 40px;border-radius:999px;
   background:linear-gradient(135deg,var(--a),var(--a2));
   color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;
-  text-decoration:none;letter-spacing:-.01em;
-  box-shadow:0 14px 50px rgba(168,85,247,.38),0 0 80px rgba(168,85,247,.15);
+  text-decoration:none;box-shadow:0 14px 50px rgba(168,85,247,.38),0 0 80px rgba(168,85,247,.15);
   transition:.2s ease;position:relative;overflow:hidden}
 .gw-cta-btn::before{content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,.12),transparent);
-  opacity:0;transition:.2s ease}
+  background:linear-gradient(135deg,rgba(255,255,255,.12),transparent);opacity:0;transition:.2s ease}
 .gw-cta-btn:hover{transform:translateY(-3px);
   box-shadow:0 22px 65px rgba(168,85,247,.50),0 0 100px rgba(168,85,247,.20);filter:brightness(1.06)}
 .gw-cta-btn:hover::before{opacity:1}
 .gw-cta-btn .arrow{font-size:20px;transition:transform .2s ease}
 .gw-cta-btn:hover .arrow{transform:translateX(4px)}
-
 .gw-cta-note{margin-top:14px;font-size:12px;color:var(--dim);font-family:'DM Mono',monospace}
 
 /* ══ HOW IT WORKS ══ */
@@ -234,31 +169,14 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   .gw-enter-card{padding:34px 22px}
   .gw-steps-wrap,.gw-social-wrap{padding:0 20px 60px}
   .gw-footer{padding:28px 20px}
-  .nav-inner{padding:0 12px}
-  .nav-cta{display:none}
-  /* mobile nav */
-  .nav-inner{height:auto;flex-wrap:wrap;padding:8px 12px;gap:8px}
-  .nav-brand{flex:1 1 auto}
-  .nav-links{display:flex!important;flex:0 0 100%;overflow-x:auto!important;
-    overflow-y:visible!important;-webkit-overflow-scrolling:touch;
-    scrollbar-width:none;gap:0;justify-content:flex-start;padding-bottom:4px}
-  .nav-links::-webkit-scrollbar{display:none}
-  .nav-dd-btn{font-size:12px;padding:0 10px;height:32px;white-space:nowrap}
-  .nav-link-btn{font-size:12px;padding:0 10px;height:32px}
-  .nav-menu{position:fixed!important;left:10px!important;right:10px!important;
-    top:112px!important;transform:none!important;width:auto!important;
-    max-height:60vh!important;overflow-y:auto!important;z-index:2147483647!important}
-  #arx-nav{overflow:visible!important;z-index:2147483647!important}
-  #arx-nav .nav-inner,#arx-nav .nav-dd{overflow:visible!important}
+  .back-bar{padding:12px 20px}
 }
 @media(max-width:480px){
   .gw-prizes{grid-template-columns:1fr 1fr}
   .gw-cta-btn{height:54px;padding:0 28px;font-size:15px}
   .gw-enter-title{font-size:22px}
 }
-@media(prefers-reduced-motion:reduce){
-  .ticker-track{animation:none}.fu{opacity:1;animation:none}.dot,.cdot{animation:none}
-}
+@media(prefers-reduced-motion:reduce){.fu{opacity:1;animation:none}.cdot{animation:none}}
 </style>
 </head>
 <body>
@@ -266,51 +184,10 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
 <div class="bg-grain"></div>
 <div class="bg-grid"></div>
 
-<!-- ══ TICKER ══ -->
-<div id="arx-ticker">
-  <div class="ticker-inner">
-    <div class="ticker-badge"><span class="dot"></span>LIVE DEALS</div>
-    <div class="ticker-marquee"><div class="ticker-track" id="js-ticker"></div></div>
-  </div>
+<!-- ══ BACK BAR ══ -->
+<div class="back-bar">
+  <a href="https://www.arxpricetime.com">← Back to ARX</a>
 </div>
-
-<!-- ══ NAV ══ -->
-<nav id="arx-nav">
-  <div class="nav-inner">
-    <a href="https://www.arxpricetime.com" class="nav-brand">
-      <img src="https://i.postimg.cc/fRkFBhcS/ARX-web-logo.png" alt="ARX">
-      <div>
-        <div class="nav-brand-name">ARX | Price &amp; Time</div>
-        <div class="nav-brand-sub">Alpha Range eXecution</div>
-      </div>
-    </a>
-    <div class="nav-links">
-      <!-- Prop Firms — dropdown -->
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Prop Firms<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-prop-firms"><span class="nav-menu-icon">📊</span>Forex Firms</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-futures"><span class="nav-menu-icon">📈</span>Futures Firms</a>
-          <a class="nav-menu-item" href="https://www.arxpricetime.com#arx-deals"><span class="nav-menu-icon">🔥</span>Today's Deals</a>
-        </div>
-      </div>
-      <!-- Learn & Access — 1 clique -->
-      <a class="nav-link-btn" href="https://arxprice-time.github.io/ARX-learn-access/" target="_blank" rel="noopener">🎓 Learn &amp; Access</a>
-      <!-- Follow Us — 1 clique -->
-      <a class="nav-link-btn" href="https://arxprice-time.github.io/ARX-follow-us/" target="_blank" rel="noopener">📱 Follow Us</a>
-      <!-- Giveaway — 1 clique, destaque roxo -->
-      <a class="nav-link-btn gw" href="https://arxprice-time.github.io/ARX-giveaway-page/" target="_blank" rel="noopener">🎁 Giveaway</a>
-      <!-- Login — dropdown -->
-      <div class="nav-dd">
-        <button class="nav-dd-btn" type="button">Login<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="https://www.arxpricetime.com/login"><span class="nav-menu-icon">🔑</span>Member Login</a>
-        </div>
-      </div>
-    </div>
-    <a class="nav-cta" href="https://www.arxpricetime.com/learning-and-access" target="_blank">Join ARX →</a>
-  </div>
-</nav>
 
 <!-- ══ HERO ══ -->
 <section class="gw-hero">
@@ -318,17 +195,16 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   <h1 class="gw-title fu d2">Enter The<br><span class="hl">ARX Giveaway</span></h1>
   <p class="gw-sub fu d3">We regularly run exclusive giveaways for the ARX community. Win prop firm challenges, course access, discount codes and special rewards.</p>
 
-  <!-- prizes -->
   <div class="gw-prizes">
     <div class="gw-prize fu d3">
       <div class="gw-prize-icon">📊</div>
       <div class="gw-prize-title">Prop Firm Challenge</div>
-      <div class="gw-prize-sub">Funded evaluation account ready to trade</div>
+      <div class="gw-prize-sub">Funded evaluation account — ready to trade</div>
     </div>
     <div class="gw-prize fu d4">
       <div class="gw-prize-icon">🎓</div>
       <div class="gw-prize-title">Course Access</div>
-      <div class="gw-prize-sub">Full ARX Method course beginner to advanced</div>
+      <div class="gw-prize-sub">Full ARX Method course — beginner to advanced</div>
     </div>
     <div class="gw-prize fu d5">
       <div class="gw-prize-icon">💜</div>
@@ -348,9 +224,7 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
   <div class="gw-enter-card fu d1">
     <div class="gw-enter-eyebrow">Enter the Giveaway</div>
     <div class="gw-enter-title">Stay Connected. Stay Ready.</div>
-    <p class="gw-enter-sub">The next name could be yours. Click below to enter your details on our secure form your information stays safe in our ARX community list.</p>
-
-    <!-- ✅ BIG BUTTON → vai para o formulário do Podia -->
+    <p class="gw-enter-sub">The next name could be yours. Click below to enter your details on our secure form — your information stays safe in our ARX community list.</p>
     <a class="gw-cta-btn" href="https://www.arxpricetime.com/giveaways" target="_blank" rel="noopener">
       Enter the Giveaway <span class="arrow">→</span>
     </a>
@@ -365,17 +239,17 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
     <div class="gw-step fu d1">
       <div class="gw-step-num">01</div>
       <div class="gw-step-title">Enter Your Details</div>
-      <div class="gw-step-sub">Click the button above and fill in your name and email on the secure ARX form. No spam we only contact winners and send ARX updates.</div>
+      <div class="gw-step-sub">Click the button above and fill in your name and email on the secure ARX form. No spam — we only contact winners and send ARX updates.</div>
     </div>
     <div class="gw-step fu d2">
       <div class="gw-step-num">02</div>
       <div class="gw-step-title">Stay in the Community</div>
-      <div class="gw-step-sub">Follow ARX on social media and join the Discord. Active community members get priority stay engaged and stay ready.</div>
+      <div class="gw-step-sub">Follow ARX on social media and join the Discord. Active community members get priority — stay engaged and stay ready.</div>
     </div>
     <div class="gw-step fu d3">
       <div class="gw-step-num">03</div>
       <div class="gw-step-title">Winner Announced</div>
-      <div class="gw-step-sub">Winners are announced live on our social channels and notified by email. Good luck the next name could be yours.</div>
+      <div class="gw-step-sub">Winners are announced live on our social channels and notified by email. Good luck — the next name could be yours.</div>
     </div>
   </div>
 </div>
@@ -391,7 +265,7 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
       <a class="gw-sbtn" href="https://www.instagram.com/arxpricetime" target="_blank">📸 Instagram</a>
       <a class="gw-sbtn" href="https://www.tiktok.com/@arx_price_time" target="_blank">🎵 TikTok</a>
       <a class="gw-sbtn" href="https://www.youtube.com/channel/UCbVKn3XHJvl6XAFGC78EcuA" target="_blank">▶️ YouTube</a>
-      <a class="gw-sbtn" href="https://x.com/arxpricetime" target="_blank">🐦 X / Twitter</a>
+      <a class="gw-sbtn" href="https://x.com/arxpricetime" target="_blank">𝕏 Twitter</a>
       <a class="gw-sbtn" href="https://discord.gg/FCZxHb4qKA" target="_blank">💬 Discord</a>
       <a class="gw-sbtn" href="https://t.me/ARXPriceTime" target="_blank">✈️ Telegram</a>
     </div>
@@ -416,45 +290,12 @@ body{background:var(--page);color:var(--text);font-family:'Outfit',sans-serif;
 
 <script>
 (function(){
-  /* ── TICKER ── */
-  const track=document.getElementById('js-ticker');
-  if(track){
-    const items=[
-      {firm:'APEX Trader Funding',disc:'90% OFF',url:'https://apextraderfunding.com/'},
-      {firm:'Take Profit Trader',disc:'40% OFF',url:'https://takeprofittrader.com/'},
-      {firm:'Lucid Trading',disc:'40% OFF',url:'https://lucidtrading.com/'},
-      {firm:'FTMO',disc:'19% OFF',url:'https://trader.ftmo.com/?affiliates=rHueIgOUyaggDZhPGJBS'},
-      {firm:'FXIFY',disc:'28% + 10% OFF',url:'https://trader.fxify.com/purchasechallenge?affiliateId=5621'},
-      {firm:'The5ers',disc:'5% OFF',url:'https://www.the5ers.com/?afmc=sca'},
-    ];
-    const h=items.map(d=>`<a class="ticker-item" href="${d.url}" target="_blank" rel="noopener"><span class="tf">${d.firm}</span><span class="td">${d.disc}</span></a>`).join('');
-    track.innerHTML=h+h+h;
-  }
-
-  /* ── YEAR ── */
   const yr=document.getElementById('js-year');
   if(yr)yr.textContent=new Date().getFullYear();
-
-  /* ── FADE UP ── */
   const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.08});
   document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-
-  /* ── DROPDOWNS (desktop + mobile) ── */
-  function toggleDD(dd){
-    const open=dd.classList.contains('open');
-    document.querySelectorAll('.nav-dd.open').forEach(o=>o.classList.remove('open'));
-    if(!open)dd.classList.add('open');
-  }
-  document.querySelectorAll('.nav-dd').forEach(dd=>{
-    const btn=dd.querySelector('.nav-dd-btn');
-    btn.addEventListener('click',e=>{e.stopPropagation();toggleDD(dd)});
-    btn.addEventListener('touchend',e=>{e.preventDefault();e.stopPropagation();toggleDD(dd)},{passive:false});
-  });
-  document.addEventListener('click',()=>document.querySelectorAll('.nav-dd.open').forEach(o=>o.classList.remove('open')));
-  document.addEventListener('touchend',e=>{if(!e.target.closest('.nav-dd'))document.querySelectorAll('.nav-dd.open').forEach(o=>o.classList.remove('open'))},{passive:true});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.nav-dd.open').forEach(o=>o.classList.remove('open'))});
 })();
 </script>
 </body>
